@@ -1,29 +1,22 @@
 package com.example.postoamoradev;
 
-import static android.content.ContentValues.TAG;
 import static android.net.Uri.decode;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
 //import com.google.firebase.messaging.FirebaseMessaging;
-
-import java.net.URLDecoder;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
@@ -91,23 +84,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        FirebaseMessaging.getInstance().getToken()
-//                .addOnCompleteListener(new OnCompleteListener<String>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<String> task) {
-//                        if (!task.isSuccessful()) {
-//                            Log.w("koike", "Fetching FCM registration token failed", task.getException());
-//                            return;
-//                        }
+//       FirebaseMessaging.getInstance().getToken()
+//               .addOnCompleteListener(new OnCompleteListener<String>() {
+//                   @Override
+//                   public void onComplete(@NonNull Task<String> task) {
+//                       if (!task.isSuccessful()) {
+//                           Log.w("koike", "Fetching FCM registration token failed", task.getException());
+//                           return;
+//                       }
 //
-//                        // Get new FCM registration token
-//                        String token = task.getResult();
-//                        // czovt8_KTYyIk3Mef75e0n:APA91bFRtKOspG0NF_bI8o0KmewNiPUMvIK67TXHD12JPb8ui9vJFz32718fipnC_w8QZB8yZGXw_cxwf6MgWznUJiMI2EdRgE1vibluRC655xNkOFx_vtwhSswYCuBfb-AQkxCiWklO
-//                        // Log and toast
-//                        //String msg = getString(R.string.msg_token_fmt, token);
-//                        Log.d("koike", token);
-//                        //Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
-//                    }
-//                });
+//                       // Get new FCM registration token
+//                       String token = task.getResult();
+//                       // czovt8_KTYyIk3Mef75e0n:APA91bFRtKOspG0NF_bI8o0KmewNiPUMvIK67TXHD12JPb8ui9vJFz32718fipnC_w8QZB8yZGXw_cxwf6MgWznUJiMI2EdRgE1vibluRC655xNkOFx_vtwhSswYCuBfb-AQkxCiWklO
+//                       // Log and toast
+//                       //String msg = getString(R.string.msg_token_fmt, token);
+//                       Log.d("koike", token);
+//                       //Toast.makeText(MainActivity.this, token, Toast.LENGTH_SHORT).show();
+//                   }
+//               });
     }
 }

@@ -8,9 +8,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_posto"
+        android:icon="@mipmap/santa_teresa_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_posto_round"
+        android:roundIcon="@mipmap/santa_teresa_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.PostoAmoraDev"
         tools:targetApi="31">
