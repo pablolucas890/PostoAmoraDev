@@ -12,7 +12,7 @@
         android:layout_height="200dp"
         android:visibility="visible"
         android:layout_gravity="center"
-        android:src="@mipmap/ippo_splash_foreground" />
+        android:src="@mipmap/posto_splash_foreground" />
 
     <WebView
         android:id="@+id/webview"
