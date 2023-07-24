@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             webView.goBack();
         } else {
             //super.onBackPressed();
-            webView.loadUrl("https://diegoramos809.editorx.io/app-posto-2");
+            webView.loadUrl("https://www.posto.amoradev.com.br/");
         }
     }
     private void enableHTML5AppCache(WebSettings settings) {
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         settings.setUseWideViewPort(true);
         //enableHTML5AppCache(settings);
-        webView.loadUrl("https://diegoramos809.editorx.io/app-posto-2");
+        webView.loadUrl("https://www.posto.amoradev.com.br/");
 
         webView.setWebViewClient(new WebViewClient() {
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                String ippo_share_prefix = "https://share.ippo.com.br/";
+                String ippo_share_prefix = "https://www.posto.amoradev.com.br/";
 
                 if (url != null && url.startsWith(ippo_share_prefix)) {
                     String message = url.substring(ippo_share_prefix.length());
