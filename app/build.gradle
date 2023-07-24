@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.postoamoradev'
+    namespace 'com.amoradev.postoamoradev'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.postoamoradev"
+        applicationId "com.amoradev.postoamoradev"
         minSdk 24
         targetSdk 33
         versionCode 1
