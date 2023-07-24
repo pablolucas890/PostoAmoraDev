@@ -15,7 +15,7 @@
         android:theme="@style/Theme.PostoAmoraDev"
         tools:targetApi="31">
         <activity
-            android:name="com.amoradev.postoamoradev.MainActivity"
+            android:name="com.amoradev.posto.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

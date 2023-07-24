@@ -1,4 +1,4 @@
-package com.amoradev.postoamoradev;
+package com.amoradev.posto;
 
 import org.junit.Test;
 

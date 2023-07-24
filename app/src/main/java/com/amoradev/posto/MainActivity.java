@@ -1,4 +1,4 @@
-package com.amoradev.postoamoradev;
+package com.amoradev.posto;
 
 import static android.net.Uri.decode;
 
@@ -12,7 +12,7 @@ import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amoradev.postoamoradev.R;
+import com.amoradev.posto.R;
 
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
