@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.amoradev.posto.R;
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             webView.goBack();
         } else {
             //super.onBackPressed();
-            webView.loadUrl("https://www.posto.amoradev.com.br/");
+            webView.loadUrl("https://www.posto.amoradev.com.br/acesso");
         }
     }
     private void enableHTML5AppCache(WebSettings settings) {
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         webView = findViewById(R.id.webview);
@@ -48,39 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
         settings.setUseWideViewPort(true);
         //enableHTML5AppCache(settings);
-        webView.loadUrl("https://www.posto.amoradev.com.br/");
+        webView.loadUrl("https://www.posto.amoradev.com.br/acesso");
 
         webView.setWebViewClient(new WebViewClient() {
 
             public void onPageFinished(WebView view, String url) {
                 findViewById(R.id.splash).setVisibility(View.GONE);
                 findViewById(R.id.webview).setVisibility(View.VISIBLE);
-            }
-
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                String ippo_share_prefix = "https://www.posto.amoradev.com.br/";
-
-                if (url != null && url.startsWith(ippo_share_prefix)) {
-                    String message = url.substring(ippo_share_prefix.length());
-                    message = decode( message );
-                    Intent sendIntent = new Intent();
-                    sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(Intent.EXTRA_TEXT, message);
-                    sendIntent.setType("text/plain");
-
-                    Intent shareIntent = Intent.createChooser(sendIntent, null);
-                    //startActivity(shareIntent);
-                    view.getContext().startActivity(shareIntent);
-                    return true;
-                }
-                // open external browser for the following
-                else if (url != null && !url.contains("ippo.com.br") && !url.contains("jotfor") &&
-                        (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("whatsapp://"))) {
-                    view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                    return true;
-                } else {
-                    return false;
-                }
             }
         });
 
